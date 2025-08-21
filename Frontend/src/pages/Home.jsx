@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     const fetchFeatures = async () => {
       try {
-        const res = await axios.get("http://localhost:7000/api/hotel/feature/all");
+        const res = await axios.get("https://hotel-booking-mjks.onrender.com/api/hotel/feature/all");
         setFeatures(res.data.allHotelFeature || []);
       } catch (error) {
         console.error("Error fetching features:", error);
@@ -25,7 +25,7 @@ const Home = () => {
 
     const fetchAmenities = async () => {
       try {
-        const res = await axios.get("http://localhost:7000/api/hotel/amenities/all");
+        const res = await axios.get("https://hotel-booking-mjks.onrender.com/api/hotel/amenities/all");
         setAmenities(res.data.allAmenities || []);
       } catch (error) {
         console.error("Error fetching amenities:", error);
@@ -34,7 +34,7 @@ const Home = () => {
 
     const fetchOffers = async () => {
       try {
-        const res = await axios.get("http://localhost:7000/api/hotel/offer/all");
+        const res = await axios.get("https://hotel-booking-mjks.onrender.com/api/hotel/offer/all");
         setOffers(res.data.allExclusiveOffer || []);
       } catch (error) {
         console.error("Error fetching offers:", error);
