@@ -27,7 +27,7 @@ const BookingForm = () => {
   useEffect(() => {
     const fetchRoom = async () => {
       try {
-        const res = await axios.post("http://localhost:7000/api/room/single", { id: roomId });
+        const res = await axios.post("https://hotel-booking-mjks.onrender.com/api/room/single", { id: roomId });
         setPricePerNight(res.data.room.price);
       } catch (err) {
         console.error("Error fetching room:", err);
@@ -58,7 +58,7 @@ const BookingForm = () => {
 
     try {
       await axios.post(
-        "http://localhost:7000/api/booking/book",
+        "https://hotel-booking-mjks.onrender.com/api/booking/book",
         {
           items: [{ RoomId: roomId }],
           bookingInfo: { ...formData },
