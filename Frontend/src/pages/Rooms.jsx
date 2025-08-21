@@ -36,7 +36,7 @@ const Rooms = () => {
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        const res = await axios.get('http://localhost:7000/api/room/all');
+        const res = await axios.get('https://hotel-booking-mjks.onrender.com/api/room/all');
         setRooms(res.data.allRoom);
       } catch (error) {
         console.error('Error fetching rooms:', error);
