@@ -13,7 +13,7 @@ const MyBookings = () => {
 
       try {
         const userId = JSON.parse(atob(token.split('.')[1])).id;
-        const res = await axios.get(`http://localhost:7000/api/booking/user/${userId}`, {
+        const res = await axios.get(`https://hotel-booking-mjks.onrender.com/api/booking/user/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setBookings(res.data.bookings);
@@ -24,7 +24,7 @@ const MyBookings = () => {
 
     const fetchRooms = async () => {
       try {
-        const res = await axios.get('http://localhost:7000/api/room/all');
+        const res = await axios.get('https://hotel-booking-mjks.onrender.com/api/room/all');
         setRooms(res.data.allRoom);
       } catch (error) {
         console.error('Error getting rooms:', error);
