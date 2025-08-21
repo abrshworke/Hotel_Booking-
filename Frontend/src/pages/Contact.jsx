@@ -19,7 +19,7 @@ const ContactPage = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:7000/api/feedback/send",
+        "https://hotel-booking-mjks.onrender.com/api/feedback/send",
         form
       );
       if (res.data.success) {
